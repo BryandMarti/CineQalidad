@@ -1,0 +1,85 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+@mixin button-styles {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9494ee, #8ca6e3, #96bbe5, #b6e0fa, #cae9f1, #dff1f6, #ead6f1, #f4f6f6);
+  background-size: cover; 
+  position: static;
+}
+
+
+#movieSearchForm {
+  margin-bottom: 20px;
+
+
+
+  label {
+    margin: 10px;
+    font-family: fantasy;
+    font-size: xx-large;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"] {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+
+  button[type="submit"] {
+    @include button-styles;
+  }
+}
+
+#searchResults {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  .movie {
+    background: #8CCDCF;
+    background: linear-gradient(to right, #8CCDCF 0%, #B0CF5A 83%);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+
+    h2 {
+      text-shadow: 0px 0px 2px black;
+      margin-bottom: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
