@@ -36,7 +36,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-// Use Express middleware to parse incoming JSON payloads
+// Use Express middleware to parse incoming JSON 
 app.use(express.json());
 
 // Serve static files from the 'public' directory
